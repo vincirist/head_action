@@ -1,38 +1,28 @@
-<package>
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>head_action</name>
-  <version>0.0.1</version>
-  <description>The head action is a node that provides an action interface for
-  pointing the head of the configured robot. It passes trajectory goals to the
-  controller, and reports success when they have finished executing.</description>
+  <version>2.0.0</version>
+  <description>The head action is a node that provides an action interface for pointing the head.</description>
   <maintainer email="bence.magyar@pal-robotics.com">Bence Magyar</maintainer>
-
   <license>BSD</license>
 
-  <url type="website">http://ros.org/wiki/head_action</url>
+  <buildtool_depend>ament_cmake</buildtool_depend>
 
-  <author>Stuart Glaser</author>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>control_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>trajectory_msgs</depend>
+  
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_geometry_msgs</depend>
+  <depend>orocos_kdl_vendor</depend>
+  <depend>kdl_parser</depend>
 
-  <buildtool_depend>catkin</buildtool_depend>
-
-  <build_depend>geometry_msgs</build_depend>
-  <build_depend>trajectory_msgs</build_depend>
-  <build_depend>sensor_msgs</build_depend>
-  <build_depend>roscpp</build_depend>
-  <build_depend>tf</build_depend>
-  <build_depend>tf_conversions</build_depend>
-  <build_depend>actionlib</build_depend>
-  <build_depend>orocos_kdl</build_depend>
-  <build_depend>kdl_parser</build_depend>
-  <build_depend>control_msgs</build_depend>
-
-  <run_depend>geometry_msgs</run_depend>
-  <run_depend>trajectory_msgs</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend>roscpp</run_depend>
-  <run_depend>tf</run_depend>
-  <run_depend>tf_conversions</run_depend>
-  <run_depend>actionlib</run_depend>
-  <run_depend>orocos_kdl</run_depend>
-  <run_depend>kdl_parser</run_depend>
-  <run_depend>control_msgs</run_depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
